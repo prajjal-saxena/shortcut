@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {  display: grid;
+  grid-template-columns: 1.3fr 0.4fr 1.3fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1em 1em;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "first first second"
+    "Fourth Third Third";
+}
+
+.first { grid-area: first; }
+
+.second { grid-area: second; }
+
+.Third { grid-area: Third; }
+
+.Fourth { grid-area: Fourth; }
+
+@media all and (-ms-high-contrast:none) {
+  .container {
+    display: -ms-grid;
+    -ms-grid-columns: 1.3fr 0.4fr 1.3fr;
+    -ms-grid-rows: repeat(2, 1fr);
+  }
+
+  .first {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+
+  .second {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+
+  .Third {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+  }
+
+  .Fourth {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="first">
+            <img width="100%" height="400px" src="au11.jpg" alt="">
+        </div>
+        <div class="second">
+            <img width="100%" height="400px" src="au12.jpg" alt="">
+        </div>
+        <div class="Third">
+            <img width="100%" height="400px" src="au14.jpg" alt="">
+        </div>
+        <div class="Fourth">
+            <img width="100%" height="400px" src="au16.jpg" alt="">
+        </div>
+      </div>
+</body>
+</html>
